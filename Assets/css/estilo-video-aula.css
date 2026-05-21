@@ -1,0 +1,347 @@
+.pre-nav-image {
+    display: block;
+    margin: 5px auto;
+    max-width: 240px;
+    height: auto;
+}
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto; /* Adiciona barra de rolagem para o site */
+}
+
+/* Cabeçalho */
+header {
+    padding: 5px;
+    text-align: center;
+    background-color: #333;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+header img {
+    height: 80px;
+    margin-right: 15px;
+}
+
+/* Layout principal */
+.container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+}
+
+/* Player principal */
+.player {
+    flex: 3; /* Controla a proporção do player */
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    margin-right: 20px;
+    margin-bottom: 6px; /* Espaço maior entre o vídeo e a seção de comentários */
+    overflow: hidden;
+}
+
+.player iframe {
+    width: 100%; /* Ocupa 100% da largura do contêiner */
+    height: 100%; /* Ajusta altura para 100% do contêiner */
+    aspect-ratio: 16/9; /* Mantém proporção 16:9 */
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Lista de vídeos */
+.video-list {
+    flex: 1;
+    background-color: #333;
+    border-radius: 10px;
+    max-height: 562.5px; /* Mesma altura do vídeo */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+}
+
+.video-list h3 {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+}
+
+.video-list ul {
+    list-style: none;
+}
+
+.video-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s;
+}
+
+.video-list li:hover {
+    background-color: #555;
+}
+
+.video-list li.selected {
+    background-color: #00c0ff; /* Cor azul para o item selecionado */
+    color: #fff; /* Texto branco no item selecionado */
+}
+
+/* Seção de comentários */
+.comment-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px; /* Espaço entre o comentário e o footer */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #444;
+}
+
+.comment-text {
+    color: #fff;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.comment-text strong {
+    color: #fff;
+}
+
+.comment-text a {
+    color: #00c0ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 0.9em;
+}
+
+.comment-text a:hover {
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 4px 0;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.footer-content img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+/* Estilo para ícones sociais */
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+    margin: 20px 0 20px 20px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #00c0ff;
+    transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .player {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .video-list {
+        width: 90%;
+        height: 50vh; /* Define a altura como 50% da altura da tela */
+        overflow-y: auto; /* Permite rolagem vertical */
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #333;
+    }
+    .video-list h3 {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+    .video-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .video-list li {
+        padding: 8px;
+        font-size: 0.9em;
+        border-bottom: 1px solid #444;
+        transition: background-color 0.3s;
+    }
+    .video-list li:hover {
+        background-color: #555;
+    }
+    .video-list li.selected {
+        background-color: #00c0ff;
+        color: #fff;
+    }
+}
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Inputs de autenticação */
+.auth-input {
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Botões de autenticação */
+.auth-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #00c0ff;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.auth-button.secondary {
+    background-color: #444;
+}
+
+.auth-button:hover {
+    background-color: #005f99;
+}
+
+/* Links de autenticação */
+.auth-link {
+    color: #00c0ff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+/* Mensagem de erro */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+/* Caixa com borda arredondada */
+.bordered-box {
+    padding: 20px;
+    border: 2px solid #00c0ff; /* Cor azul do botão Login */
+    border-radius: 10px; /* Borda arredondada */
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona um leve sombreamento */
+}
+/* Tela de carregamento */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Spinner para o carregamento */
+.spinner {
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #00c0ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+/* Animação do spinner */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Mensagem de sucesso */
+.success-message {
+    color: #00c0ff;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+

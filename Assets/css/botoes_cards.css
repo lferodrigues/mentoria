@@ -1,0 +1,52 @@
+ /* Estilos para o card */
+ .map-card {
+    width: 300px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o mapa incorporado */
+.map-container {
+    width: 100%;
+    padding-bottom: 75%; /* Proporção do mapa (4:3) */
+    position: relative;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+height: 100%;
+line-height: 1.8;
+}
+
+/*Cabeçalho da imagem em altura total */
+.bgimg-1 {
+background-position: center;
+background-size: cover;
+background-image: url("Assets/img/banner.png");
+min-height: 100vh;
+}
+
+.w3-bar .w3-button {
+padding: 16px;
+
+
+}
+#slideshow {
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+a.w3-button {
+min-width: 115px; /* Ajuste a largura mínima dos botões conforme necessário */
+}
