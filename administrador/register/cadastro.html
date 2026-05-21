@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Mentoria</title>
+    <script src="../Assets/js/historico-navegacao.js"></script>
+    <link rel="icon" href="../Assets/img/logo.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../Assets/img/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../Assets/css/estilo-video-aula.css">
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
+</head>
+<body>
+    <header>
+        <a href="https://feliperodrigues.net">
+            <img src="../Assets/img/banner04.png" alt="Logo Felipe Rodrigues" style="height: 60px;">
+        </a>
+          Cadastro - Mentoria de Informática
+    </header>
+    <div id="register-screen" class="auth-container">
+        <h1>Cadastro</h1>
+        <input type="text" id="first-name" class="auth-input" placeholder="Nome">
+        <input type="text" id="last-name" class="auth-input" placeholder="Sobrenome">
+        <input type="email" id="email" class="auth-input" placeholder="Email">
+        <input type="password" id="password" class="auth-input" placeholder="Senha">
+        <input type="password" id="confirm-password" class="auth-input" placeholder="Confirmar Senha">
+        <input type="date" id="birthdate" class="auth-input" placeholder="Data de Nascimento">
+        <input type="text" id="cpf" class="auth-input" placeholder="CPF">
+        <input type="text" id="phone" class="auth-input" placeholder="Telefone">
+        <div class="auth-buttons">
+            <button id="register-btn" class="auth-button">Cadastrar</button>
+            <button id="back-to-login-btn" class="auth-button secondary">Voltar para Login</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <a href="https://feliperodrigues.net">
+                <img src="../Assets/img/banner04.png" alt="Logo do Felipe">
+            </a>
+            <p>© <span id="currentYear">2024</span> Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth-compat.js"></script>
+    <script src="../Assets/js/firebase-config.js"></script>
+    <script src="../Assets/js/cadastro.js"></script>
+</body>
+</html>

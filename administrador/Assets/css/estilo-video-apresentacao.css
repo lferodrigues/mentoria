@@ -1,0 +1,305 @@
+/* Estilo Geral */
+body {
+	body p,
+body li,
+body span,
+body h1,
+body h2,
+body h3 {
+    text-align: justify; /* Alinha o texto de forma justificada */
+}
+
+/* Justificação para listas */
+ul {
+    text-align: justify; /* Garante que o texto de itens de lista também fique justificado */
+}
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #000000, #004080);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinhamento no topo */
+    min-height: 100vh;
+}
+
+/* Seção de Destaque */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 1200px; /* Limite máximo para não ultrapassar larguras muito grandes */
+    animation: fadeIn 1s ease-in-out;
+    box-sizing: border-box;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #00c0ff;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .cta-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #000; /* Cor preta */
+    color: #fff; /* Texto branco */
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #00c0ff; /* Contorno azul fino */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: #00c0ff; /* Fundo azul no hover */
+    color: #000; /* Texto preto no hover */
+}
+
+/* Seções de Conteúdo */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limite máximo para não ultrapassar larguras muito grandes */
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.content-section:nth-child(even) .text-content {
+    order: 2;
+}
+
+.text-content {
+    width: 55%;
+}
+
+.text-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #00c0ff;
+}
+
+.text-content p, .text-content ul {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.text-content ul {
+    list-style-type: disc;
+    margin: 10px 20px;
+    padding: 0;
+}
+
+.image-content, .video-content {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que as imagens não ultrapassem os limites */
+}
+
+/* Para as imagens dentro das .image-content */
+.image-content img {
+    width: 100%;
+    height: 300px; /* Definir uma altura fixa para as imagens */
+    object-fit: cover; /* Garante que as imagens cubram completamente a área sem distorção */
+    border-radius: 12px;
+}
+
+/* Para os vídeos dentro da .video-wrapper */
+.video-wrapper {
+    display: flex; /* Flexbox para centralização */
+    justify-content: center; /* Alinhamento horizontal */
+    align-items: center; /* Alinhamento vertical */
+    width: 40%; /* Reduz a largura para 80% do contêiner principal */
+    max-width: 760px; /* Limita a largura máxima */
+    height: 300px; /* Define uma altura fixa menor */
+    padding: 0;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    background-color: #000; /* Fundo opcional */
+    box-sizing: border-box;
+}
+
+.video-wrapper iframe {
+    width: 100%; /* Responsivo dentro do contêiner */
+    height: 100%; /* Responsivo dentro do contêiner */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Seção de Chamada para Ação */
+.cta-section {
+    text-align: center;
+    margin: 20px 0;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px; /* Limite máximo para não ultrapassar larguras muito grandes */
+    box-sizing: border-box;
+}
+
+.cta-section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #00c0ff;
+}
+
+.cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    background-color: #000; /* Cor preta */
+    color: #fff; /* Texto branco */
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #00c0ff; /* Contorno azul fino */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00c0ff; /* Fundo azul no hover */
+    color: #000; /* Texto preto no hover */
+}
+
+/* Animação Fade-In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .text-content, .image-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Imagens em telas pequenas */
+    .image-content img {
+        height: 200px; /* Ajuste para telas menores */
+    }
+
+ .video-wrapper {
+        width: 90%; /* Ajuste da largura para mobile */
+        max-width: 320px; /* Limite máximo da largura no mobile */
+        aspect-ratio: 4 / 3; /* Define a proporção de 4:3 */
+        height: auto; /* Altura ajustada automaticamente com base na largura */
+    }
+
+    .video-wrapper iframe {
+        width: 100%; /* Ocupa toda a largura do contêiner */
+        height: 100%; /* Mantém a proporção definida pelo contêiner */
+    }
+
+    .hero {
+        width: 100%;
+        max-width: 100%; /* Garante que o hero ocupe toda a largura disponível */
+    }
+
+    .cta-section {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+footer {
+    background-color: #0c0b0b;
+    color: #fff;
+    text-align: center;
+    padding: 4px 0;
+    flex-shrink: 0;
+    margin-top: 20px;
+    width: 100%; /* Ajusta o footer para ocupar toda a largura da tela */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.footer-content img {
+    width: 100px;
+    margin-right: 10px;
+}
+#slideshow {
+    width: 78%; /* Ajuste conforme o tamanho desejado */
+    max-width: 600px; /* Limite de largura */
+    height: auto; /* Ajusta altura proporcional */
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px; /* Arredondamento opcional */
+    transition: opacity 1s ease-in-out; /* Efeito de fade-in e fade-out */
+    opacity: 1; /* Inicialmente visível */
+}
+.social-icons {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os ícones */
+    margin-top: 20px;
+}
+
+.social-icons .icon {
+    color: white;
+    font-size: 18px; /* Tamanho dos ícones */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    transform: scale(1.1); /* Aumenta levemente o tamanho no hover */
+}
+
+/* Cores personalizadas ao passar o mouse */
+.social-icons .instagram:hover {
+    color: #E4405F; /* Cor do Instagram */
+}
+
+.social-icons .linkedin:hover {
+    color: #0077B5; /* Cor do LinkedIn */
+}
+
+.social-icons .twitter:hover {
+    color: #1DA1F2; /* Azul do Twitter */
+}
+
+.social-icons .youtube:hover {
+    color: #FF0000; /* Vermelho do YouTube */
+}
+
+.social-icons .website:hover {
+    color: #00A86B; /* Verde para o ícone do site */
+}
