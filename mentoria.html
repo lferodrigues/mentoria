@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/css/botoes_cards.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="Assets/img/logo.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="Assets/img/logo.ico" type="image/x-icon" />
+    <title>Felipe Rodrigues | Video Aula</title>
+    <link rel="stylesheet" href="./Assets/css/estilo-video-aula.css">
+    <script src="./Assets/js/funcao-video.js"></script>
+    <style>
+.logout-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #f44336; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.logout-btn i {
+    margin-right: 5px;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f; /* Vermelho mais escuro */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between; /* Distribui o conteúdo nas extremidades */
+        align-items: center; /* Centraliza o conteúdo do header verticalmente */
+        padding: 10px 20px; /* Ajusta o padding para evitar sobreposição */
+        position: relative; /* Torna o header um contêiner de referência para o botão */
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end; /* Alinha o botão de logout à direita */
+        align-items: center;
+    }
+
+    .logout-btn {
+        position: relative; /* Torna o botão um elemento relativo para não se sobrepor ao texto */
+        margin-left: 20px; /* Ajusta a distância do botão do texto */
+    }
+
+    .container {
+        margin-top: 60px; /* Garante que o conteúdo da página não sobreponha o header */
+    }
+
+    /* Aumentando o tamanho da frase na versão mobile */
+    header a {
+        font-size: 24px; /* Aumenta o tamanho da fonte */
+        font-weight: bold; /* Deixa o texto em negrito para maior destaque */
+    }
+}
+ 
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <a href="https://feliperodrigues.net.br">
+            <img src="./Assets/img/banner04.png" alt="Logo Felipe Rodrigues" style="height: 60px;" />
+        </a>
+        <h4> Mentoria de Informática </h4>
+        <nav>
+            <!-- Botão de logout -->
+            <button class="logout-btn" onclick="window.location.href='https://feliperodrigues.net.br/login'">
+                <i class="fa fa-sign-out"></i> Sair
+            </button>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <div class="container">
+        <!-- Player principal -->
+        <div class="player">
+            <iframe
+                src="https://www.youtube.com/embed/Xiad5bGSLD0?si=CQ9gdMbJVMqtOmb2"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Lista de vídeos -->
+        <div class="video-list">
+            <h3>Próximos Vídeos</h3>
+            <ul>
+        <li data-video='https://www.youtube.com/embed/Xiad5bGSLD0?si=CQ9gdMbJVMqtOmb2'>Aula 00 - Introdução</li>
+        <li data-video='https://www.youtube.com/embed/Op6F-NiLQDo?si=E3gHrLbRrOl5a32c'>Aula 01 - Leis de internet no Brasil</li>
+        <li data-video='https://www.youtube.com/embed/j3B2ud8Yw-c?si=9zbtb8E6fiZY-wOg'>Aula 02 - Introdução ao Excel</li>
+        <li data-video='https://www.youtube.com/embed/rtOrxKdv8Mk?si=1E1C5j93yKFLD2lw'>Aula 03 - Procv</li>
+        <li data-video='https://www.youtube.com/embed/70cazzsSfqE?si=eHV8fm3gKfoaXJim'>Aula 04 - Formula Se</li>
+        <li data-video='https://www.youtube.com/embed/DfGT9WH0xVA?si=rgamHVlUNYmgaZMy'>Aula 05 - Conteudo extra - Revisão</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 06 - Introdução ao Excel Intemediario</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 07 - Analisando Dados</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 08 - Dashboard Comercial</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 09 - Dashboard Area da Saúde</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 10 - Introdução ao Word</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 08 - Introdução ao PowerPoint</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 09 - Utilizando o PowerBi</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 10 - Criando seus apps com PowerApps</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 11 - Introdução ao armazenamento em nuvem</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 12 - Gerenciador de Emails</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 13 - Introdução a limpeza de sistema Windows</li>
+        <li data-video='https://www.youtube.com/embed/TfToeURYsu4?si=sfEQqcClucDA2V13'>Aula 14 - Introdução ao Canva</li>
+        <li data-video='https://www.youtube.com/embed/NX9CYClqI9c?si=KJSJaQIWsva-JfJC'>Aula 15 - Post para Hamburgueria</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 16 - MiniCurso de Photoshop</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 17 - Editando Videos com CapCut</li>
+        <li data-video='https://www.youtube.com/embed/yfzH_pTE5Zg?si=A503kvOpE5BioBpF'>Aula 18 - Introdução a Inteligência Artificial</li>
+        <li data-video='https://www.youtube.com/embed/i3rIrTdURB0?si=ym8ZeQ11K4Ohc7We'>Aula 19 - Estudo sobre Gemini e Copilot</li>
+        <li data-video='https://www.youtube.com/embed/N2xuEqn-2Gw?si=rWzFTBJqZImaTwil'>Aula 20 - Estudo sobre a Grok a I.A do Twitter</li>
+        <li data-video='https://www.youtube.com/embed/Y4fVpAw-pGU?si=OWEQVTcQ5oTkhnjJ'>Aula 21 - Analisando a Qwen a I.A do alibaba</li>
+        <li data-video='https://www.youtube.com/embed/4jV_A5DTxAA?si=14ehleoEBCi3Hj9a'>Aula 22 - Estudo sobre a DeepSeek</li>
+        <li data-video='https://www.youtube.com/embed/IM84NeNd9Zg?si=i7XfJU7hysnuo7Jf'>Aula 23 - Estudo sobre o Manychat</li>
+        <li data-video='https://www.youtube.com/embed/jDzxT8cM1tg?si=vslX3dfGkLrpdfq9'>Aula 24 - Gerando personas com o CapCut</li>
+        <li data-video='https://www.youtube.com/embed/RXKXOBbblTU?si=-dKnMV3eCRSZ6JbX'>Aula 25 - Gerando videos para canais dark com I.A</li>
+        <li data-video='https://www.youtube.com/embed/FKmR5FUoryc?si=VoRxOwCdHETt-8zT'>Aula 26 - Clonando pessoas usando o Heygen</li> 
+        <li data-video='https://www.youtube.com/embed/AufVvIUN-6o?si=2bcjNSWe26mfLFLV'>Aula 27 - Utilizando o I.A Studio do Google Gemini</li>
+        <li data-video='https://www.youtube.com/embed/InEKEEKzHAs?si=-p-kit6lZ3qVmdLH'>Aula 28 - Como utilizar o VEO 3 - A nova I.A geradora de videos do google</li> 
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 29 - Formatação utilizando o windows</li>
+        <li data-video='https://www.youtube.com/embed/6kMT1D8umLg?si=Hiol-ZnDTgZN287M'>Aula 30 - Formatação utilizando o linux</li>
+
+            </ul>
+        </div>
+    </div>
+     <div class="comment-section">
+        <img src="./Assets/img/perfil.png" alt="Foto de perfil" class="profile-pic">
+        <div class="comment-text">
+            <p><strong>Felipe Rodrigues:</strong><a href="https://drive.google.com/drive/folders/1WYSb2_R84v7Cm04tDWzqc3NVW1g3IzBo?usp=drive_link" target="_blank"> Clique aqui para baixar o material do curso</a>
+            
+            </p>
+            </a>
+        </div>
+    </div>
+     <!-- agente de I.A -->
+    <div class="comment-section">
+        <img src="./Assets/img/perfil.png" alt="Foto de perfil" class="profile-pic">
+        <div class="comment-text">
+            <p><strong>Tira dúvidas com o Vandinho I.A:</strong><a href="https://aistudio.instagram.com/ai/950361277257786?utm_source=ai_agent" target="_blank"> Clique aqui para acessar </a>
+            </p>
+            </a>
+        </div>
+     </div>    
+        <div class="social-icons">
+                <p>Contato:</p>
+                <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/prof_lferodrigues/" target="_blank"></a>
+                <a class="fa fa-twitter w3-hover-opacity" href="https://twitter.com/lferodrigues" target="_blank"></a>
+                <a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/in/felipe-rodrigues-12732b235" target="_blank"></a>
+                <a class="fa fa-whatsapp w3-hover-opacity" href="https://wa.me/5532998409798" target="_blank"></a>
+            </div>
+            
+            </p>
+            </a>
+        
+    </div>
+    <footer>
+        <div class="footer-content">
+            <a href="https://feliperodrigues.net">
+                <img src="./Assets/img/banner04.png" alt="Logo do Felipe">
+            </a>
+            <p>© <span id="currentYear">2024</span> Todos os direitos reservados</p>
+        </div>
+    </footer>
+    
+<script src="./Assets/js/mentoria.js"></script>
+<script src="./Assets/js/sec.js"></script>
+</body>
+</html>

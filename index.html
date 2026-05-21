@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Meta Description -->
+    <meta name="description" content="Plataforma de informática básica com cursos de Word, Excel, PowerPoint e Windows. Aprenda online com materiais práticos e mentoria personalizada. Inscreva-se já!">
+    <!-- Palavras-chave -->
+    <meta name="keywords" content="cursos de informática básica, aprender informática, Word, Excel, PowerPoint, Windows, cursos gratuitos, habilidades digitais, informática online, mentoria personalizada">
+    <!-- Autor -->
+    <meta name="Felipe Rodrigues" content="Mentoria de Informática">
+    <!-- Open Graph (Para Redes Sociais) -->
+    <meta property="og:title" content="Curso de Informática Básica | Aprenda Word, Excel e Mais!">
+    <meta property="og:description" content="Domine as principais ferramentas de informática com nossos cursos gratuitos. Aprenda Word, Excel, PowerPoint e Windows com mentoria personalizada. Inscreva-se já!">
+    <meta property="og:image" content="https://feliperodrigues.net.br/assets/img/banner04.png">
+    <meta property="og:url" content="https://feliperodrigues.net.br">
+    <meta property="og:type" content="website">
+    <title>Mentoria Completa de Informática - Felipe Rodrigues</title>
+    <link rel="stylesheet" href="./administrador/Assets/css/estilo-video-apresentacao.css">
+    <link rel="icon" href="Assets/img/logo.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="Assets/img/logo.ico" type="image/x-icon" />
+</head>
+<script>
+    var images = [
+            "./administrador/Assets/img/felipe.jpeg",
+            "./administrador/Assets/img/ia.webp",
+            "./administrador/Assets/img/premio_2024.jpg",
+            "./administrador/Assets/img/premio_2025.jpg",
+            "./administrador/Assets/img/premio_2026.webp",
+            "./administrador/Assets/img/office.jpeg",
+            "./administrador/Assets/img/ia.jpeg",
+            "./administrador/Assets/img/senai.jpeg",
+            "./administrador/Assets/img/CARD MODELO.png",
+            "./administrador/Assets/img/if.webp",
+        ];
+        var currentIndex = 0;
+
+        function changeImage() {
+            var img = document.getElementById("slideshow");
+
+            // Inicia o fade-out
+            img.style.opacity = 0;
+
+            setTimeout(function () {
+                // Após o fade-out, troca a imagem
+                currentIndex = (currentIndex + 1) % images.length;
+                img.src = images[currentIndex];
+
+                // Inicia o fade-in
+                img.style.opacity = 1;
+            }, 1000); // Tempo do fade-out (1s)
+        }
+
+        // Troca a imagem a cada 5 segundos
+        setInterval(changeImage, 5000);
+</script>
+<body>
+    <main>
+        <!-- Seção de Destaque -->
+        <header class="hero">
+            <h1>Mentoria Completa de Informática</h1>
+            <p>Transforme sua carreira dominando as ferramentas essenciais do mercado!</p>
+        </header>
+
+        <!-- Seção de Motivos para Aprender Informática com Vídeo -->
+        <section class="content-section">
+            <div class="text-content">
+                <h2>Por que Aprender Informática?</h2>
+                <p>Em um mundo cada vez mais digital, saber usar ferramentas de informática não é apenas uma vantagem, é uma necessidade!</p>
+                <p>Você sabia que 80% das vagas de emprego exigem conhecimento básico de ferramentas como Excel, Word e PowerPoint? Além disso, profissionais com habilidades em ferramentas digitais têm 50% mais chances de serem promovidos. A era digital está transformando tudo e dominar essas ferramentas é seu primeiro passo para o sucesso profissional.</p>
+                <ul>
+                    <li>Desenvolva habilidades essenciais para o mercado de trabalho.</li>
+                    <li>Aumente sua produtividade pessoal e profissional.</li>
+                    <li>Esteja preparado para os desafios e oportunidades da era digital.</li>
+                    <li>Garanta um diferencial competitivo e impulsione sua carreira!</li>
+                </ul>
+            </div>
+<div class="video-wrapper">
+    <iframe
+        src="https://www.youtube.com/embed/teqAhdP3GC4?si=U-QntFEd1ITlltnh"
+        title="Video Example"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</div>
+            
+        </section>
+
+        <!-- Sobre o Instrutor -->
+        <section class="content-section">
+            <div class="image-content">
+                <a href="https://feliperodrigues.net"> <img  src="./administrador/Assets/img/felipe.jpeg" id="slideshow" alt="Foto do Instrutor"> </a>
+            </div>
+            <div class="text-content">
+                <h2>Sobre o Instrutor</h2>
+                <p>Felipe Rodrigues é Analista de Sistemas e especialista em Segurança da Informação, Instrutor de cursos em Informática Básica na Agência de Desenvolvimento de São João Nepomuceno e Regiao.
+                Eleito como o melhor instrutor de informática em São João Nepomuceno no ano de 2024 pelo o grupo promove,
+                com vasta experiência acadêmica e profissional. Pós Graduado em Engenharia de Redes e Segurança de Dados, LGPD e Segurança da Informação
+                 possui diversas certificações, incluindo Marketing Digital,Computaçao Forense, Tec em Informatica para Internet,Tec em Gestão de Sistemas,Tec em Programação para internet dentre outras.</p>
+                 <div class="social-icons">
+                    <a href="https://www.instagram.com/prof_lferodrigues/" target="_blank" class="icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/felipe-rodrigues-12732b235" target="_blank" class="icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://twitter.com/lferodrigues" target="_blank" class="icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@lferodrigues" target="_blank" class="icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                     </a>
+                    <a href="https://www.tiktok.com/@proflferodrigues" target="_blank" class="icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://feliperodrigues.net" target="_blank" class="icon website">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+                
+                </div>
+            
+            
+        </section>
+
+        <!-- Sobre o Curso -->
+        <section class="content-section">
+            <div class="text-content">
+                <h2>O que você vai aprender?</h2>
+                <ul>
+                    <li>Domine Excel, Word, PowerPoint e Power BI.</li>
+                    <li>Conhecimentos sobre Manutenção de computadores.</li>
+                    <li>Introdução a ferramentas como Canva e Photoshop.</li>
+                    <li>Conhecimentos básicos sobre Inteligência Artificial.</li>
+                    <li>Estratégias práticas para o mercado de trabalho.</li>
+                    <li>Introdução a LGPD e Segurança da Informação.</li>
+                </ul>
+            </div>
+            <div class="image-content">
+                  <img src="./administrador/Assets/img/banner03.png" alt="Imagem do Curso"> 
+            </div>
+        </section>
+
+        <!-- Seção de Chamada para Ação -->
+        <section class="cta-section" id="matricula">
+            <h2>Garanta sua vaga agora mesmo!</h2>
+            <p>Invista no seu futuro e transforme sua carreira. As vagas são limitadas!</p>
+            <a href="https://pay.kiwify.com.br/zqPkf1Y" class="cta-button">Matricule-se já!</a>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <a href="https://feliperodrigues.net">
+                <img src="./Assets/img/banner04.png" alt="Logo do Felipe">
+            </a>
+            <p>© <span id="currentYear">2024</span> Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="./Assets/js/sec.js"></script>
+</body>
+</html>

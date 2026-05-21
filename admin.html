@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./administrador/Assets/css/estilo-video-aula.css">
+    <title>Mentoria de Informática | administrador</title>
+    <link rel="icon" href="Assets/img/logo.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="login-screen" class="auth-container">
+        <div>
+            <a href="https://feliperodrigues.net"><img class="pre-nav-image" src="./Assets/img/banner04.png" alt="Logo"></a>
+        </div>
+        <div class="bordered-box">
+            <center>
+                <h3>Login do administrador</h3>
+            </center>
+            <br>
+            <input type="email" id="email" class="auth-input" placeholder="Email">
+            <input type="password" id="password" class="auth-input" placeholder="Senha">
+            <div class="auth-buttons">
+                <button id="login-btn" class="auth-button">Login</button>
+            </div>
+            <p id="error-message" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Tela de carregamento -->
+    <div id="loading-screen" class="loading-container" style="display: none;">
+        <div class="spinner"></div>
+        <p>Carregando...</p>
+    </div>
+
+
+    <script src="./administrador/Assets/js/admin.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth-compat.js"></script>
+    <script src="./Assets/js/firebase-config.js"></script>
+    <script src="./Assets/js/funcao-vodeo.js"></script>
+    <script src="./Assets/js/sec.js"></script>
+    <script>localStorage.setItem('authenticated', 'true');</script>
+</body>
+
+</html>

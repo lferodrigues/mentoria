@@ -1,0 +1,41 @@
+// Referências aos elementos
+const loginBtn = document.getElementById('login-btn');
+const registerBtn = document.getElementById('register-btn');
+const forgotPasswordLink = document.getElementById('forgot-password-link');
+const errorMessage = document.getElementById('error-message');
+
+// Login
+loginBtn.addEventListener('click', () => {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(() => {
+            window.location.href = 'mentoria.html';
+        })
+        .catch((error) => {
+            errorMessage.style.display = 'block';
+            errorMessage.textContent = error.message;
+        });
+});
+
+// Redirecionar para Cadastro
+registerBtn.addEventListener('click', () => {
+    window.location.href = 'cadastro.html';
+});
+
+// Redirecionar para Recuperar Senha
+forgotPasswordLink.addEventListener('click', () => {
+    const email = document.getElementById('email').value;
+    if (!email) {
+        alert('Por favor, insira seu email para redefinir a senha.');
+        return;
+    }
+    firebase.auth().sendPasswordResetEmail(email)
+        .then(() => {
+            alert('Email de redefinição de senha enviado! Verifique sua caixa de entrada.');
+        })
+        .catch((error) => {
+            alert(error.message);
+        });
+});

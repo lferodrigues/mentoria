@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/css/estilo-video-aula.css">
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
+    <link rel="icon" href="Assets/img/logo.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="Assets/img/logo.ico" type="image/x-icon" />
+    <title>Recuperação de Senha</title>
+</head>
+<body>
+    <div id="password-recovery-screen" class="auth-container">
+        <div>
+            <a href="https://feliperodrigues.net">
+                <img class="pre-nav-image" src="./Assets/img/banner04.png" alt="Logo">
+            </a>
+        </div>
+        <div class="bordered-box">
+            <center>
+                <h3>Recuperação de Senha</h3>
+            </center>
+            <br>
+            <input type="email" id="recovery-email" class="auth-input" placeholder="Digite seu email">
+            <div class="auth-buttons">
+                <button id="recover-password-btn" class="auth-button">Enviar</button>
+            </div>
+            <p id="success-message" class="success-message" style="display: none;">
+                Um email de recuperação foi enviado. Verifique sua caixa de entrada!
+            </p>
+            <p id="error-message" class="error-message" style="display: none;"></p>
+        </div>
+    </div>
+    <script src="./Assets/js/funcao-video.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth-compat.js"></script>
+    <script src="./Assets/js/firebase-config.js"></script>
+    <script src="./Assets/js/login.js"></script>
+    
+    <script>
+        document.getElementById("recover-password-btn").addEventListener("click", () => {
+            const email = document.getElementById("recovery-email").value;
+    
+            if (email) {
+                // Tenta enviar o email de recuperação
+                firebase.auth().sendPasswordResetEmail(email)
+                    .then(() => {
+                        // Se o email foi encontrado, envia o email de recuperação
+                        document.getElementById("success-message").style.display = "block";
+                        document.getElementById("success-message").textContent =
+                            "Um email de recuperação foi enviado. Verifique sua caixa de entrada!";
+                        document.getElementById("error-message").style.display = "none";
+                    })
+                    .catch((error) => {
+                        // Verifica o erro para determinar se o email foi encontrado ou não
+                        if (error.code === 'auth/user-not-found') {
+                            // Email não encontrado, exibe a mensagem apropriada
+                            document.getElementById("error-message").style.display = "block";
+                            document.getElementById("error-message").textContent =
+                                "Email não encontrado em nossa base de dados.";
+                        } else {
+                            // Para outros erros, exibe a mensagem padrão
+                            document.getElementById("error-message").style.display = "block";
+                            document.getElementById("error-message").textContent =
+                                "Erro ao enviar email de recuperação: " + error.message;
+                        }
+                        document.getElementById("success-message").style.display = "none";
+                    });
+            } else {
+                // Exibe mensagem de erro se o email não for preenchido
+                document.getElementById("error-message").style.display = "block";
+                document.getElementById("error-message").textContent =
+                    "Por favor, insira um email válido.";
+                document.getElementById("success-message").style.display = "none";
+            }
+        });
+    </script>
+    
+    
+    
+</body>
+</html>
