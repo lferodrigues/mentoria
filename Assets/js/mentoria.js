@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Verifica se o usuário veio da URL correta
         if (document.referrer !== allowedReferrer) {
             // Redireciona caso não tenha vindo do admin
-            window.location.href = "https://feliperodrigues.net.br";
+            window.location.href = "https://professorfeliperodrigues.com.br";
         } else {
             // Permite acesso ao cadastro
             showLoadingScreen(false);
@@ -50,5 +50,5 @@ document.addEventListener("DOMContentLoaded", () => {
 if (localStorage.getItem('authenticated') !== 'true') {
     // Remove a autenticação inválida e redireciona
     localStorage.removeItem('authenticated');
-    window.location.href = 'https://feliperodrigues.net.br';
+    window.location.href = 'https://professorfeliperodrigues.com.br/login';
 }
