@@ -45,7 +45,7 @@ loginButton.addEventListener('click', () => {
         // Verifica se as credenciais correspondem às esperadas
         if (email === 'contato@feliperodrigues.net' && password === 'Fe67541@') {
             // Redireciona para o link especificado
-            window.location.href = 'https://feliperodrigues.net.br/administrador/register/cadastro';
+            window.location.href = 'https://professorfeliperodrigues.com.br/administrador/register/cadastro';
         } else {
             // Esconde a tela de carregamento e exibe um alerta de acesso negado
             showLoadingScreen(false);
