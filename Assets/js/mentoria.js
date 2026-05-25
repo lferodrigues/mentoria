@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Verificar a origem do usuário usando document.referrer
-    const allowedReferrer = "https://feliperodrigues.net.br/login";
+    const allowedReferrer = "https://professorfeliperodrigues.com.br/login";
 
     // Mostrar tela de carregamento (opcional)
     function showLoadingScreen(show) {
