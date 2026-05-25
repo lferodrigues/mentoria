@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Verificar a origem do usuário usando document.referrer
-    const allowedReferrer = "https://feliperodrigues.net.br/admin";
+    const allowedReferrer = "https://professorfeliperodrigues.com.br/admin";
 
     // Mostrar tela de carregamento (opcional)
     function showLoadingScreen(show) {
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Verifica se o usuário veio da URL correta
         if (document.referrer !== allowedReferrer) {
             // Redireciona caso não tenha vindo do admin
-            window.location.href = "https://feliperodrigues.net.br";
+            window.location.href = "https://professorfeliperodrigues.com.br";
         } else {
             // Permite acesso ao cadastro
             showLoadingScreen(false);
