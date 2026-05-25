@@ -52,7 +52,7 @@ document.getElementById("login-btn").addEventListener("click", () => {
             console.log("Login realizado com sucesso:", userCredential.user);
 
             // Redireciona para a página de mentoria
-            window.location.href = "https://feliperodrigues.net.br/mentoria";
+            window.location.href = "https://professorfeliperodrigues.com.br/mentoria";
 
             // Remove a tela de loading após o redirecionamento
             document.body.removeChild(loadingScreen);
