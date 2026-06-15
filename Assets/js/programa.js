@@ -1,69 +1,55 @@
-document.getElementById("login-btn").addEventListener("click", () => {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+// Seleciona os elementos do DOM
+const loginButton = document.getElementById('login-btn');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
 
-    // Criação da tela de loading
-    const loadingScreen = document.createElement("div");
-    loadingScreen.id = "loading-screen";
-    loadingScreen.style.position = "fixed";
-    loadingScreen.style.top = "0";
-    loadingScreen.style.left = "0";
-    loadingScreen.style.width = "100%";
-    loadingScreen.style.height = "100%";
-    loadingScreen.style.backgroundColor = "rgba(30, 30, 30, 0.9)";
-    loadingScreen.style.display = "flex";
-    loadingScreen.style.flexDirection = "column";
-    loadingScreen.style.justifyContent = "center";
-    loadingScreen.style.alignItems = "center";
-    loadingScreen.style.color = "#fff";
-    loadingScreen.style.zIndex = "1000";
+// Mostrar tela de carregamento
+function showLoadingScreen(show) {
+    let loadingScreen = document.getElementById("loading-screen");
+    if (!loadingScreen) {
+        loadingScreen = document.createElement("div");
+        loadingScreen.id = "loading-screen";
+        loadingScreen.style = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(30, 30, 30, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            z-index: 1000;
+        `;
+        loadingScreen.innerHTML = `
+            <div style="border: 6px solid rgba(255, 255, 255, 0.2); border-top: 6px solid #00c0ff; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite;"></div>
+            <p style="margin-top: 15px; font-family: Arial, sans-serif;">Carregando...</p>
+        `;
+        document.body.appendChild(loadingScreen);
+    }
+    loadingScreen.style.display = show ? "flex" : "none";
+}
 
-    const spinner = document.createElement("div");
-    spinner.style.border = "6px solid rgba(255, 255, 255, 0.2)";
-    spinner.style.borderTop = "6px solid #00c0ff";
-    spinner.style.borderRadius = "50%";
-    spinner.style.width = "50px";
-    spinner.style.height = "50px";
-    spinner.style.animation = "spin 1s linear infinite";
+// Adiciona evento de clique ao botão de login
+loginButton.addEventListener('click', () => {
+    const email = emailInput.value;
+    const password = passwordInput.value;
 
-    const message = document.createElement("p");
-    message.textContent = "Carregando...";
-    message.style.marginTop = "15px";
-    message.style.fontFamily = "Arial, sans-serif";
+    // Exibe a tela de carregamento
+    showLoadingScreen(true);
 
-    loadingScreen.appendChild(spinner);
-    loadingScreen.appendChild(message);
-    document.body.appendChild(loadingScreen);
-
-    // Adiciona animação de spin ao spinner
-    const styleSheet = document.createElement("style");
-    styleSheet.type = "text/css";
-    styleSheet.textContent = `
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+    // Simula um pequeno atraso para demonstrar a tela de carregamento
+    setTimeout(() => {
+        // Verifica se as credenciais correspondem às esperadas
+        if (email === 'contato@feliperodrigues.net' && password === 'Fe67541@') {
+            // Redireciona para o link especificado
+            window.location.href = 'https://drive.google.com/drive/folders/0BzemsKQCb94NYTZPdEREc0FuQUU?resourcekey=0-5Bb-e-A4PUo5ifO0Cdjsyw&usp=sharing';
+        } else {
+            // Esconde a tela de carregamento e exibe um alerta de acesso negado
+            showLoadingScreen(false);
+            alert('Acesso Negado');
         }
-    `;
-    document.head.appendChild(styleSheet);
-
-    // Lógica original de autenticação e carregamento
-    firebase.auth().signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            console.log("Login realizado com sucesso:", userCredential.user);
-
-            // Redireciona para a página de programas compartilhados
-            window.location.href = "https://drive.google.com/drive/folders/0BzemsKQCb94NYTZPdEREc0FuQUU?resourcekey=0-5Bb-e-A4PUo5ifO0Cdjsyw&usp=sharing";
-
-            // Remove a tela de loading após o redirecionamento
-            document.body.removeChild(loadingScreen);
-        })
-        .catch((error) => {
-            console.error("Erro ao fazer login:", error);
-
-            // Exibe uma mensagem de erro com alert
-            alert("Erro ao fazer login: E-mail e/ou senha incorretos. Por favor, tente novamente.");
-
-            // Remove a tela de loading em caso de erro
-            document.body.removeChild(loadingScreen);
-        });
+    }, 1000); // 1 segundo de atraso para simular processamento
 });
