@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/css/estilo-video-aula.css">
+    <title>Mentoria de Informática | Aprenda Word, Excel e Mais!</title>
+    <meta name="description"
+        content="Plataforma da kentoria informáticacom cursos de Word, Excel, PowerPoint I.A e muito mias. Aprenda online com materiais práticos e mentoria personalizada. Inscreva-se já!">
+    <meta name="keywords"
+        content="cursos de informática básica, aprender informática, Word, Excel, PowerPoint, Windows, cursos gratuitos, habilidades digitais, informática online, mentoria personalizada">
+    <link rel="icon" href="Assets/img/logo.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="login-screen" class="auth-container">
+        <div>
+            <a href="https://feliperodrigues.net"><img class="pre-nav-image" src="./Assets/img/banner04.png" alt="Logo"></a>
+        </div>
+        <div class="bordered-box">
+            <center>
+                <h1>Login</h1>
+            </center>
+            <br>
+            <input type="email" id="email" class="auth-input" placeholder="Email">
+            <input type="password" id="password" class="auth-input" placeholder="Senha" >
+            <a href="./recuperacao.html" id="forgot-password-link" class="auth-link left-aligned">Esqueci minha senha</a>
+            <div class="auth-buttons">
+                <button id="login-btn" class="auth-button">Login</button>
+            </div>
+            <p id="error-message" class="error-message"></p>
+        </div>
+    </div>
+    <!-- Tela de carregamento -->
+<div id="loading-screen" class="loading-container" style="display: none;">
+    <div class="spinner"></div>
+    <p>Carregando...</p>
+</div>
+
+    <!-- Área onde o conteúdo da mentoria será carregado -->
+    <div id="app-content" style="display: none;"></div>
+   
+   
+    <script src="./Assets/js/index.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth-compat.js"></script>
+    <script src="./Assets/js/firebase-config.js"></script>
+    <script src="./Assets/js/login.js"></script>
+    
+<script src="./Assets/js/funcao-vodeo.js"></script>
+<script src="./Assets/js/sec.js"></script>
+</body>
+
+</html>
